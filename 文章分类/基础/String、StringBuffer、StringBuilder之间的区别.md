@@ -1,0 +1,4 @@
+# String、StringBuffer、StringBuilder的区别
+- String是不可改变的，一旦对String做出修改，那么就会产生一个新的对象，而原来的对象会被丢弃。StringBuffer和StringBuilder是可变的，对它们的操作都是在原来的对象上进行的
+- StringBuffer是线程安全的，StringBulider是线程不安全的
+- 单线程下StringBuffer的效率比StringBuilder低
