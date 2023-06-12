@@ -1,0 +1,10 @@
+# CurrentHashMap扩容机制
+- 1.7版本的ConcurrentHashMap是基于Segment分段实现的
+- 每隔Segment相当于小型的HashMap，它们有自己的锁，当一个线程占用锁访问一个Segment时，其他线程可以访问其他Segment
+- 每个Segment内部都可以进行扩容，和HashMap的扩容逻辑类似，先生成新的数组，然后移动元素到新的数组中，扩容的判断是每个Segment单独判断的，判断是否超出阈值
+- 在Java1.8版本中，ConcurrentHashMap已经不再使用Segment分段锁，而是使用CAS+Synchronized来保证并发安全
+- 当某个线程进行put的时候，如果发现ConcurrentHashMap正在进行扩容，那么这个线程就会一起进行扩容
+- 如果某个线程put时，发现没在扩容，则将key-value添加进ConcurrentHashMap中，然后判断是否超出阈值，超过了就进行扩容
+- ConcurrentHashMap是支持多线程进行扩容的
+- 扩容之前会生成一个新的数组
+- 在转移元素的时候，会先将原数组进行分组，每个线程负责转移一组元素，转移完成之后，再进行下一组元素的转移（每个线程负责一组或多组的转移操作）
