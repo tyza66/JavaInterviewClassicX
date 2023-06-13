@@ -1,0 +1,16 @@
+# Java中的异常体系
+- 异常的分类
+    - Error
+        - 由于JVM的错误导致的异常，如内存溢出，虚拟机错误等
+    - Exception
+        - 分为两种
+            - RuntimeException
+                - 运行时异常，如空指针异常，数组越界异常等
+            - 非RuntimeException CheckedException
+                - 非运行时异常，如IO异常，SQL异常等
+- Java中的所有异常都来自顶级父类Throwable
+- Throwable下有两个子类Exception和Error
+- Error是程序无法处理的错误，一旦出现，程序就必须被终止
+- Exception是程序本身可以处理的异常，程序可以捕获并进行处理
+- RunTimeException常常发生在程序运行的过程中，会导致当前线程执行失败
+- CheckedException常常发生在程序编译的过程中，回到中程序编译不通过
