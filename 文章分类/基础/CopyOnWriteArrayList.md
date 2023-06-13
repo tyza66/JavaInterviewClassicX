@@ -1,0 +1,7 @@
+# CopyOnWriteArrayList的底层原理是什么
+- CopyOnWriteArrayList是一个线程安全的ArrayList，它的实现原理是：在写入数据的时候不直接往当前容器Object[]添加，而是先将当前容器Object[]进行Copy，复制出一个新的容器Object[] newElements，然后向新容器Object[] newElements里添加元素，添加完元素之后，再将原容器的引用指向新的容器setArray(newElements)。这样做的好处是可以对CopyOnWriteArrayList进行并发的读，而不需要加锁，因为当前容器不会添加任何元素。所以CopyOnWriteArrayList也是一种读写分离的思想，读和写不同的容器。
+- CopyOnWriteArrayList的缺点是：内存占用问题，当List非常大的时候，每次添加，删除，修改都会复制，内存开销非常大，读写分离也是一个时间开销。
+- CopyOnWriteArrayList内部是通过数组来实现的，在向CopyOnWriteArrayList他添加元素的时候，会赋值一个新的数组，写操作在新的数组上进行，读操作在原数组上进行
+- 并且在写操作的时候，会对新数组进行加锁，这样就保证了写操作的线程安全性，防止出现并发写入丢失数据
+- 写操作之后会把数据指向新的数组
+- CopyOnWriteArrayList允许在写操作时来读取数据，大大提高了读的性能，因此适合读多写少的场景，但是CopyOnWriteArrayList会比较占内存，同时可能读到的数据不是实时的最新数据，所以不适合性能要求高的场景
