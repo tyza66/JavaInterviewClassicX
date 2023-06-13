@@ -11,3 +11,4 @@
         - 负责加载用户类路径（ClassPath）所指定的类，开发者可以直接使用该类加载器，如果应用程序中没有自定义过自己的类加载器，一般情况下这个就是程序中默认的类加载器
     - 自定义类加载器
         - 除了系统提供的类加载器之外，开发者可以通过继承java.lang.ClassLoader类的方式实现自己的类加载器，以满足一些特殊的需求
+- BootStrapClassLoader是ExtClassLoader的父加载器，默认加载%JAVA_HOME%lib下的jar包和class⽂件
