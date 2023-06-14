@@ -13,3 +13,4 @@
         - 除了系统提供的类加载器之外，开发者可以通过继承java.lang.ClassLoader类的方式实现自己的类加载器，以满足一些特殊的需求
 - BootStrapClassLoader是ExtClassLoader的父加载器，默认加载%JAVA_HOME%lib下的jar包和class⽂件
 - ExtClassLoader是AppClassLoader的父类加载器，负责加载%JAVA_HOME%/lib/ext⽂件夹下的jar包和class类
+- AppClassLoader是自定义类加载器的父类，负责加载classpath路径下的文件
