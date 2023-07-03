@@ -1,2 +1,11 @@
 # JSP的内置对象有哪些
-- 
+- JSP中预先定义了九大内置对象：Request、Response、Session、Application、Out、Pagecontext、Config、Page、Exception
+- Request对象：Request对象是HttpServletRequest类型对象，这个对象代表了客户端的请求信息，主要用于接收通过HTTP协议传送到服务器的数据（包括头信息、系统信息、请求方式以及请求参数等）
+- Response对象：Response对象代表的是客户端的响应，主要是将JSP容器处理过的对象传回客户端
+- Session对象：Session对象是由服务器自动创建的与用户请求相关的对象。服务器为每个用户都生成了一个Session对象，用于保护该用户的信息，跟踪用户的操作状态，Session对象内部使用Map类来保存数据，因此保存的数据的格式为Key-Value的形式，Session对象的Value值可以是复杂的对象类型。Session保存的信息会在用户关闭浏览器或退出登录的时候失效
+- Application对象：它其实是ServletContext类的实例。主要用于保存信息，它是一个共享的内置对象，就是一个容器里面的多个用户都可以使用一个共享对象，可以用来记录网站总访问量等
+- Out对象：Out对象是javax.servlet.jsp.JspWriter类的实例。主要用于向客户端浏览器输出数据
+- Pagecontext对象：PageContext对象是javax.servlet.jsp.PageContext类的实例。用来管理网页属性，为JSP页面包装页面的上下文，管理对属于JSP中特殊可见部分中已命名对象的访问，它的创建和初始化都是由JSP容器来完成的
+- Config对象：Config对象是javax.servlet.ServletConfig类的实例。是代码片段配置对象，表示Servlet的配置
+- Page对象：Page对象是javax.servlet.jsp.HttpJspPage类的实例。用来处理JSP网页，它指的是JSP页面对象本身，或者说代表编译后的servlet对象，只有在JSP页面范围之内才是合法的
+- Exception对象：Exception对象是java.lang.Throwable类的实例。处理JSP文件执行时发生的错误和异常只有在JSP页面的page指令中指定isErrorPage=“true”后，才可以在本页面使用exception对象
