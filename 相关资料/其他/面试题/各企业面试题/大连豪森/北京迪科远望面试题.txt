@@ -1,0 +1,12 @@
+抽象类和接口的区别
+RestController和controller的区别
+Oracle的端口号和tomcat的端口号
+vue的生命周期
+java的基本数据类型,String是基本数据类型吗 ,String可以继承吗
+对于面向对象的理解
+eclispse的快捷键
+Springboot和Springcloud的区别
+spring的注解,有几个,分别是干什么的?
+ssm都是那些
+泛型是什么?
+

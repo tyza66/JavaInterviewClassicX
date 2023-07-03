@@ -1,0 +1,56 @@
+javase
+1 switch中条件表达式数据类型
+2 集合 List Map Set区别 Map中hashCode 如果hashCode值一致 怎么查找这个元素 
+3 手写99乘法表
+4 四种访问权限修饰符
+5 final关键字应用
+6 List对象如何去重  
+将equals方法和hashCode方法重写 定义相等规则进行比较
+7 try catch finally 如果有return finally是否执行
+8 创建对象的几种方式
+9 多线程 
+如何保证多线程安全
+10 int与Integer什么区别
+11 栈和堆是什么
+12 Integer i1 = new Integer(100) Integer i2 = new Integer(100)
+i1是否等于i2
+解释具体拆箱和装箱
+13 String str="1,2,3,4"
+String拼接 截取 拆分方法
+try{
+       语句；
+	return 1;
+}catch(){
+	return 2;
+}finally{
+	return 3;
+}
+两个对象是否相等 
+框架
+1 Spring模块有哪些
+2 Spring IOC 和 AOP 是什么 解释一下 并分别举例
+3 mybatis中dao层接口和Mapper.xml如何连接  三层架构如何实现
+4 Java语言是否有goto方法
+5 Spring中有哪些注解
+6 SSM框架分别是什么  解释一下 
+7 SpringMVC的组成部分 
+数据库
+1 mysql与oracle区别 具体区别在哪里 分页如何处理
+2 count(*) count(0) count(1)区别
+3 drop delete 区别
+4 数据库多表联查
+5 事务是什么 如何开启结束事务 事务四大特性 
+6 优化sql语句 
+前端
+1 同步异步请求
+2 怎么保证数据同步
+3 死锁是否了解
+4 get与post区别 get请求参数放在那里  post请求参数携带在哪里
+
+javaee
+1 什么是Servlet
+2 service层都有什么 干什么的  负责什么 可以不要嘛 
+
+
+
+

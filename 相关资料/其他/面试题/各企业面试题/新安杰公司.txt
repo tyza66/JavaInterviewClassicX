@@ -1,0 +1,11 @@
+javaee是什么
+jsp的内置对象，分别说出是什么
+spring的注解
+springmvc原理
+ajax，
+集合和数组的区别
+你常用的集合有哪些，arraylist，linkedlist，有什么区别
+jQuery怎么绑定id jQuery声明全局变量
+什么是OOP 
+
+
