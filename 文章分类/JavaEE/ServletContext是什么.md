@@ -1,0 +1,7 @@
+# ServletContext是什么
+- ServletContext是Servlet中的上下文对象
+- 它是Servlet中最大的一个接口，呈现了web应用的Servlet的视图
+- ServletContext实例是通过session对象的"getServletContext()"方法获得的
+- 当WEB服务器启动时，会为每个web应用程序（webapps下面每个目录都是一个应用程序）创建一块共享的内存区域，这个区域就是ServletContext
+- 同一个WEB应用程序中，所有的Servlet和JSP都可以共享同一个区域
+- ServletContext会在服务启动时创建，服务关闭时销毁，我们可以把他看作是一个全局应用程序共享对象
