@@ -1,0 +1,4 @@
+# 创建Servlet为什么不继承Servlet接口而是继承HttpServlet
+- HttpServlet类是Servlet接口的一个实现，它提供了处理HTTP请求和响应的功能，包含了一些常用的方法（doGet、doPost等），用于处理不同的HTTP请求
+- HttpServlet可以容易地实现处理HTTP的Servlet
+- 而且继承HttpServlet还可以直接使用Servlet规范中提供的一些功能特性
