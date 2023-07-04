@@ -1,0 +1,6 @@
+# Portlet和Servlet有什么区别
+- Portlet是一种Web组件，而Servlet是一种Java类
+- Portlet是基于portlet容器的，而Servlet是基于servlet容器的
+- Portlet可以在一个页面上显示多个portlet，Servlet只能在一个页面上显示一个servlet
+- Portlet可以共享portlet容器中的资源，而Servlet不能
+- 他们都是Java Web应用程序中的重要组件，但是他们有着不同的用途和功能
