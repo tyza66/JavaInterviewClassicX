@@ -1,2 +1,6 @@
-# MyBatis的注解开发如何配置
-- 首先配置MyBatis
+ce# MyBatis的注解开发如何配置
+- 首先配置MyBatis扫描路径，就是在Spring配置文件中添加以一个org.mybatis.spring.mapper.MapperScannerConfigurer的Bean其中使用过property标签给属性basePackage赋予值，这个值就是要扫描的用来存放mapper的包路径
+- 之后需要拿到一个DataSource(org.springframework.jdbc.datasource.DriverManagerDataSource)的Bean,并在其中填入驱动名、链接、用户名、密码
+- 之后注册一个SqlSessionFactory(org.mybatis.spring.SqlSessionFactoryBean)的Bean，并且将刚刚获得的DataSource的Bean作为参数填入其中
+- 之后可以在指定的包中定义Dao层的Mapper了
+- 之后在需要使用对应Mapper的Service层中可以直接注入需要的Mapper层实例化的对象了（或者使用普通的方式通过SqlSessionFactory传入Mapper的class获得mapper对象）
