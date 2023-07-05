@@ -1,1 +1,5 @@
 # RestController和Controller有什么区别
+- RestController相当于@Controller+@ResponseBody，它在处理HTTP请求时，会将响应结果自动转换成JSON或XML格式
+- @Controller在处理HTTP请求时，通常需要手动编写处理方法，例如使用@RequestMapping注解来指定请求的URL和HTTP方法。而@RestController已经内置了许多用于处理HTTP请求的功能，如处理请求参数、处理异常等
+- 在使用@RestController时，当响应结果需要返回JSON或XML格式时，不需要手动加上@ResponseBody注解，因为@RestController会自动进行转换。而使用@Controller时，需要手动在对应的方法上加上@ResponseBody注解
+- @RestController适合用于构建RESTful风格的Web服务，它提供了更方便的方式来处理HTTP请求和响应。而@Controller则更适合用于构建传统的Web服务，需要手动编写更多的代码来处理请求和响应
