@@ -1,0 +1,3 @@
+# iframe怎么切换网页
+- 可以使用各种前端框架或者直接使用原生js编辑iframe标签的src属性
+- 还可以使用a标签href属性指定一个地址，之后在target里面填入iframe标签的id值
