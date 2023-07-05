@@ -1,0 +1,3 @@
+# Servlet中的监听器
+- 监听器（Listener）是一种用于监听并响应特定事件的对象Servlet容器会为每个特定的请求创建一个Servlet实例来处理，这些实例在处理完请求后会被销毁。而监听器则是在Servlet容器启动的时候被创建，并在整个应用运行期间一直存在
+- 常见的Servlet监听器有：ServletContextListener、HttpSessionListener、ServletRequestListener
