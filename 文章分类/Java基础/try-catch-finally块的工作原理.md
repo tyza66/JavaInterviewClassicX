@@ -1,2 +1,6 @@
 # try-catch-finally块的工作原理
-- 
+- try语句中定义了要进行错误测试的代码，如果没有发生异常就跳过catch阶段。在catch中定义了当try语句发生错误的时候，捕获这个错误并且进行处理的处理方案，只有当try中的代码抛出了错误，才会执行。finally语句是无论前面是否有异常都会执行的代码
+- 当我们使用这种代码块的时候，try语句是必须的，catch括号中参数是必须的
+- 在这种代码块中的catch和finally都是可选的（也就是说一共有这三种模式try…catch、try…finally、try…catch…finally）
+- 如果在try中包含了return语句，会将return的结果保存下来，执行完finally语句，try中保存下来的返回值才返回，因此在finally中如何让修改都不会影响返回值
+- 只要finally里面没有return语句，那么返回值就由try或者catch的return语句决定，否则由finally的return语句决定
